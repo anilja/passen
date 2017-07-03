@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h2 class="busform_title"><%= @busform.title %></h2>
+<p class="busform_sub_title"><%= @busform.description %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @busform.description %>
+</p>
+
+<div id="stops_wrapper">
+ <%= render @busform.stops %>
+	<div id="sform">
+		<%= render "stops/form" %>
+	</div>
+</div>
+
+<div class="links">
+	<%= link_to 'Edit', edit_busform_path(@busform) %> |
+	<%= link_to 'Back', busforms_path %>
+</div>

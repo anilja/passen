@@ -1,0 +1,11 @@
+<% @busforms.each do |busform| %>
+  <div class="index_row">
+    <h2 class="busform_title"><%= link_to busform.title, busform %></h2>
+    <p class="busform_sub_title"><%= busform.description %></p>
+  </div>
+<% end %>
+
+
+<div class="links">
+  <%= link_to "New Bus Form", new_busform_path %>
+</div>

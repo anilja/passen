@@ -30,12 +30,13 @@ gem 'simple_form', '~> 3.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, test do
+group :development, :test do
 	gem 'sqlite3'
 end
 
 group :production do
 	gem 'pg'
+end
 
 
 group :development, :test do

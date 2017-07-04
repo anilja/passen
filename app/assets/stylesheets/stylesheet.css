@@ -145,23 +145,23 @@ border-top:20px solid #AF5EC2!important;
 
 
 .go{
+  
 
-height250px;
-width:auto;
-margin-top: 25px;
-margin-bottom: 20px;
-margin-right: 10px;
-background:  #f2f2f2;
-border-radius: 10px 10px 10px 10px;
-border-top:30px solid #AF5EC2!important;
-text-align:center;
-font-size: 40px;
-font-weight: 300;
-font-color: green;
+  height250px;
+  width:auto;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  background:  #f2f2f2;
+  border-radius: 10px 10px 10px 10px;
+  border-top:30px solid #AF5EC2!important;
+  text-align:center;
+  font-size: 40px;
+  font-weight: 300;
+  font-color: green;
         
+    }
     
-
-}
 .button{
 background-color: #4CAF50;
     border: none;

@@ -12,11 +12,33 @@
 
 ActiveRecord::Schema.define(version: 20170702174814) do
 
+  create_table "buses", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "busforms", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "busstops", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "routes", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "bus_id"
+    t.integer  "bustops_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bus_id"], name: "index_routes_on_bus_id"
+    t.index ["bustops_id"], name: "index_routes_on_bustops_id"
   end
 
   create_table "stops", force: :cascade do |t|

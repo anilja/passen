@@ -6,22 +6,17 @@
 #
 development:
   adapter: postgresql
-  encoding: utf8
-  database: project_development
+  encoding: unicode
+  database: passen_development
   pool: 5
-  timeout: 5000
+  username: trf
+  password:
 
 test: 
   adapter: postgresql
-  encoding: utf8
-  database: project_test
+  encoding: unicode
+  database: passen_test
   pool: 5
-  timeout: 5000
+  username: trf
+  password:
   
-
-production:
-  adapter: postgresql
-  encoding: utf8
-  database: project_production
-  pool: 5
-  timeout: 5000

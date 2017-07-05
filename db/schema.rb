@@ -10,13 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170702174814) do
+ActiveRecord::Schema.define(version: 20170705081704) do
 
-  create_table "buses", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "busforms", force: :cascade do |t|
     t.string   "title"
@@ -25,28 +22,13 @@ ActiveRecord::Schema.define(version: 20170702174814) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "busstops", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "routes", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "bus_id"
-    t.integer  "bustops_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["bus_id"], name: "index_routes_on_bus_id"
-    t.index ["bustops_id"], name: "index_routes_on_bustops_id"
-  end
-
   create_table "stops", force: :cascade do |t|
     t.string   "content"
     t.integer  "busform_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["busform_id"], name: "index_stops_on_busform_id"
+    t.index ["busform_id"], name: "index_stops_on_busform_id", using: :btree
   end
 
+  add_foreign_key "stops", "busforms"
 end

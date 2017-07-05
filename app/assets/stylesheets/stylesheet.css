@@ -2910,8 +2910,7 @@ top:0;
 
 #stops_wrapper {
   .row {
-    width:400px;
-    height:70px;
+    width: 50%;
     border-top: 1px solid rgba(250,250,250, .3);
     border-bottom: 1px solid rgba(250,250,250, .3);
     float:right;

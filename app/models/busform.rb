@@ -1,3 +1,3 @@
 class Busform < ApplicationRecord
-	has_many :stops
+	has_many:stops
 end

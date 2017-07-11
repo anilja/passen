@@ -1,5 +1,6 @@
 class StopsController < ApplicationController
 	before_action :set_busform
+	before_action :set_stop, except: [:create]
 
 	def create
 		@stop = @busform.stops.create(stop_params)
@@ -20,12 +21,14 @@ class StopsController < ApplicationController
 
 	def set_busform
 		@busform = Busform.find(params[:busform_id])
+
 	end
 
 	def set_stop
 		@stop = @busform.stops.find(params[:id])
 	end
 
+	
 
 	def stop_params
 		params[:stop].permit(:content)

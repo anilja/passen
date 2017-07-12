@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-   resources :busforms do
+
+  resources :busforms do
       resources :stops do
       end
-    end
+    end  
 
-   root "busforms#index"   
+
+      root "busforms#index"
 
   get 'new/signup'=> 'new#signup'
   get 'new/bustickets'=> 'new#bustickets'
@@ -16,6 +18,8 @@ Rails.application.routes.draw do
   get 'new/train'=> 'new#train'
 
 end
+
+
 
 
 

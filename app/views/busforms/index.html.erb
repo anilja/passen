@@ -58,8 +58,7 @@
   <br>
   <br>
   <br>
-
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwMxo4Zne-NBl8A8h-MBYlgjxppC_5rLc&libraries=places&callback=initMap"async defer></script>
 <script type="text/javascript">
 
 var directionsDisplay = new google.maps.DirectionsRenderer();
@@ -133,7 +132,7 @@ function GetRoute() {
 </script>
 
 
-  <%= search_form_for @search do |f| %>
+<%= search_form_for @search do |f| %>
 <div class="container">  
 <div class="col-md-4">
 <div class="field">

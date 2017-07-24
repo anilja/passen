@@ -1,11 +1,14 @@
-  class BusformsController < ApplicationController
+    class BusformsController < ApplicationController
   before_action :set_busform, only: [:show, :edit, :update, :destroy]
 
   # GET /busforms
   # GET /busforms.json
   def index
-    @busforms = Busform.all
+    @search = Busform.search(params[:q])
+    @busforms = @search.result
+  #store all the clients that match the name searched    
   end
+  
 
   # GET /busforms/1
   # GET /busforms/1.json

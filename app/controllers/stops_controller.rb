@@ -6,6 +6,7 @@ class StopsController < ApplicationController
 		@stop = @busform.stops.create(stop_params)
 		redirect_to @busform
 	end
+	
 
 	def destroy
 		@stop = @busform.stops.find(params[:id])
@@ -26,6 +27,9 @@ class StopsController < ApplicationController
 
 	def set_stop
 		@stop = @busform.stops.find(params[:id])
+		@search = @busform.stops.search(params[:q])
+		@stop = @search.result
+
 	end
 
 	
